@@ -1,14 +1,17 @@
-from processing.data_processing import preprocess_data, fill_missing_dates, remove_unwanted_columns
+from processing.data_processing import preprocess_data, remove_unwanted_columns
 from data_exploration.explore_data import explore_data
 from recommender.recommendation_model import recommend,load_tfidf_matrix,train_recommender
 import gradio as gr
-from data_utils.data_validation import check_for_nan  
 from data_loader.data_loading import load_movies
 import pickle
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from data_utils.excel_utils import save_to_excel
+import streamlit as st
 
+x = st.slider('Select a value')
+st.write(x, 'squared is', x * x)
 # Cargar películas
 movies = load_movies()
 
@@ -16,16 +19,8 @@ movies = load_movies()
 movies = preprocess_data(movies)
 movies = remove_unwanted_columns(movies)
 
-def save_to_excel(movies):
-    movies.to_excel('excel.xlsx', index=True)
-
 save_to_excel(movies)
-"""
-if nan_present:
-    print("¡Hay valores NaN en el conjunto de datos!")
-else:
-    print("No hay valores NaN en el conjunto de datos.")
-"""
+
 # Explorar datos
 explore_data(movies)
 

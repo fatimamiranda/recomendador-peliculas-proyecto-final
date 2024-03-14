@@ -1,4 +1,3 @@
-import pandas as pd
 
 def check_for_nan(data):
     # Verificar la presencia de NaN en el DataFrame

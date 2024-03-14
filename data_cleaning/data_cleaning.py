@@ -2,7 +2,6 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import pandas as pd
-import json
 import re
 # Cargar variables de entorno
 load_dotenv()
