@@ -1,6 +1,6 @@
 ## Conjunto de Datos
 
-### Título: [Nombre del Conjunto de Datos]
+### Título: RECOMENDADOR DE PELICULAS
 
 ### Descripción:
 Este proyecto utiliza el conjunto de datos [Nombre del Conjunto de Datos], que se encuentra en Kaggle (https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?rvi=1). El conjunto de datos contiene información sobre metadatos para las 45.000 películas enumeradas en el conjunto de datos Full MovieLens. Fue utilizado para la realización de un recomendador de peliculas.
