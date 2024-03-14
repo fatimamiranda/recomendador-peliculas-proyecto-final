@@ -1,3 +1,5 @@
 /data
 .env
 tdidf_matrix.pickle
+prueba.py
+__pycache__/
