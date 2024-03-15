@@ -74,7 +74,7 @@ def recommend(reference_movie_index):
             print(f"Error en el cálculo de la recomendación: {e}")
 
 
-options = [(row["title"], index ) for index, row in movies.iterrows()]
+options = [(row["title"], index ) for index, row in movies.iterrows()][:50]
 
 print(options[46891:46897])
 
